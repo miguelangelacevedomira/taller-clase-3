@@ -1,0 +1,26 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+
+public class NumerosPares {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Pedir al usuario que ingrese el número de evaluaciones
+        System.out.print("Ingresa un número entero n: ");
+        int n = scanner.nextInt();
+        
+        // Recorrer los números del 1 hasta n
+        for (int i = 1; i <= n; i++) {
+            // Verificar si el número es par o impar
+            if (i % 2 == 0) {
+                System.out.println(i + " es un número par.");
+            } else {
+                System.out.println(i + " es un número impar.");
+            }
+        }
+        
+        scanner.close();
+    }
+}
