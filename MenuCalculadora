@@ -1,0 +1,76 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+
+public class MenuCalculadora {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
+
+        do {
+            System.out.println("\nMenú de Calculadora:");
+            System.out.println("1. Calcular área de un rectángulo");
+            System.out.println("2. Calcular área de un círculo");
+            System.out.println("3. Calcular área de un triángulo");
+            System.out.println("4. Salir");
+            System.out.print("Elige una opción: ");
+
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.print("Ingresa la base del rectángulo: ");
+                    double baseRect = scanner.nextDouble();
+                    System.out.print("Ingresa la altura del rectángulo: ");
+                    double alturaRect = scanner.nextDouble();
+                    if (baseRect > 0 && alturaRect > 0) {
+                        System.out.println("Área del rectángulo: " + calcularAreaRectangulo(baseRect, alturaRect));
+                    } else {
+                        System.out.println("Valores inválidos. Deben ser positivos.");
+                    }
+                    break;
+                case 2:
+                    System.out.print("Ingresa el radio del círculo: ");
+                    double radio = scanner.nextDouble();
+                    if (radio > 0) {
+                        System.out.println("Área del círculo: " + calcularAreaCirculo(radio));
+                    } else {
+                        System.out.println("Valor inválido. Debe ser positivo.");
+                    }
+                    break;
+                case 3:
+                    System.out.print("Ingresa la base del triángulo: ");
+                    double baseTri = scanner.nextDouble();
+                    System.out.print("Ingresa la altura del triángulo: ");
+                    double alturaTri = scanner.nextDouble();
+                    if (baseTri > 0 && alturaTri > 0) {
+                        System.out.println("Área del triángulo: " + calcularAreaTriangulo(baseTri, alturaTri));
+                    } else {
+                        System.out.println("Valores inválidos. Deben ser positivos.");
+                    }
+                    break;
+                case 4:
+                    System.out.println("¡Hasta luego!");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intenta de nuevo.");
+            }
+        } while (opcion != 4);
+
+        scanner.close();
+    }
+
+    public static double calcularAreaRectangulo(double base, double altura) {
+        return base * altura;
+    }
+
+    public static double calcularAreaCirculo(double radio) {
+        return Math.PI * radio * radio;
+    }
+
+    public static double calcularAreaTriangulo(double base, double altura) {
+        return (base * altura) / 2;
+    }
+}
