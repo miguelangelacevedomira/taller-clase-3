@@ -1,0 +1,24 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+
+public class RegistroUsuarios {
+    public static void main(String[] args) {
+        // Declaración de arrays para almacenar datos de 5 usuarios
+        String[] nombres = {"Mariana", "Johan", "Juan", "Roberto", "Miguel"};
+        int[] edades = {16, 21, 18, 28, 17};
+        // Se podría usar un array de boolean para el estado, pero en este caso se usa implícitamente.
+
+        for (int i = 0; i < nombres.length; i++) {
+            // Verificar si la edad es mayor o igual a 18
+            if (edades[i] >= 18) {
+                System.out.println("Usuario " + nombres[i] + " es mayor de edad.");
+            } else {
+                System.out.println("Usuario " + nombres[i] + " es menor de edad.");
+            }
+        }
+    }
+ {
+    
+    }
+}
