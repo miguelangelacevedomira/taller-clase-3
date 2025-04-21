@@ -1,0 +1,59 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+
+public class CalculadoraBasica {
+
+    // Método para sumar dos números
+    public static int sumar(int a, int b) {
+        return a + b;
+    }
+
+    // Método para restar dos números
+    public static int restar(int a, int b) {
+        return a - b;
+    }
+
+    // Método para multiplicar dos números
+    public static int multiplicar(int a, int b) {
+        return a * b;
+    }
+
+    // Método para dividir dos números, controlando división por cero
+    public static double dividir(int a, int b) {
+        if (b == 0) {
+            System.out.println("Error: División por cero no está permitida.");
+            return Double.NaN; // Retorna Not-a-Number en caso de división por cero
+        }
+        return (double) a / b;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario ingresar dos números
+        System.out.print("Ingresa el primer número entero: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Ingresa el segundo número entero: ");
+        int num2 = scanner.nextInt();
+
+        // Llamar a los métodos y mostrar resultados
+        System.out.println("Suma: " + sumar(num1, num2));
+        System.out.println("Resta: " + restar(num1, num2));
+        System.out.println("Multiplicación: " + multiplicar(num1, num2));
+        System.out.println("División: " + dividir(num1, num2));
+
+        // Comparar los números
+        if (num1 > num2) {
+            System.out.println("El primer número (" + num1 + ") es mayor que el segundo (" + num2 + ").");
+        } else if (num1 < num2) {
+            System.out.println("El segundo número (" + num2 + ") es mayor que el primero (" + num1 + ").");
+        } else {
+            System.out.println("Ambos números son iguales.");
+        }
+
+        scanner.close();
+    }
+}
