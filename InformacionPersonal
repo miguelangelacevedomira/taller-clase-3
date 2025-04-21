@@ -1,0 +1,23 @@
+public class InformacionPersonal {
+    public static void main(String[] args) {
+        // Declaración y asignación de variables
+        String nombre = "Miguelangel Acevedo";
+        int edad = 17;
+        double estatura = 1.72; // en metros
+        char inicial = 'M';
+        boolean esEstudiante = true;
+
+        // Imprimir un mensaje combinando los valores
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Estatura: " + estatura + " metros");
+        System.out.println("Inicial: " + inicial);
+        System.out.println("¿Es estudiante? " + (esEstudiante ? "Sí" : "No"));
+
+        // Declarar y recorrer un arreglo de notas
+        int[] notas = {85, 90, 78, 92, 88};
+        for (int i = 0; i < notas.length; i++) {
+            System.out.println("Posición " + i + ": Nota = " + notas[i]);
+        }
+    }
+}
